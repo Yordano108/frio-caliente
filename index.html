@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Frío | Tibio | Caliente</title>
+    <style type="text/tailwindcss">
+        @import "tailwindcss";
+        /* Transición suave para el cambio de atmósfera del fondo */
+        body { transition: background 0.8s ease-in-out; }
+    </style>
+</head>
+
+<body id="cuerpo"
+    class="bg-gradient-to-br from-[#2D1B33] via-[#883aaf] to-[#66576c] flex items-center justify-center min-h-screen p-4">
+
+    <div
+        class="bg-white border-4 border-[#2D1B33] p-10 rounded-3xl w-full max-w-md shadow-2xl text-center backdrop-blur-sm">
+        <h1 class="text-4xl font-black text-[#883aaf] mb-8 tracking-tighter uppercase">Adivina el número</h1>
+
+
+        <div class="space-y-6">
+            <input type="number" id="numero-usuario"
+                class="w-full p-4 rounded-xl border-4 border-[#2D1B33]  bg-[#883aaf]/10 text-[#2D1B33] text-center text-4xl"
+                placeholder="000">
+
+            <button id="btn-adivinar" onclick="comprobar()"
+                class="w-full bg-[#883aaf] hover:bg-[#9858ba] text-[#2D1B33] font-bold py-4 rounded-xl transition-all active:scale-95 uppercase tracking-widest text-sm shadow-lg">
+                Comprobar
+            </button>
+        </div>
+
+        <div id="resultado"
+            class="mt-8 p-6 rounded-xl border-4 border-[#2D1B33] bg-[#883aaf]/10 min-h-[100px] flex items-center justify-center">
+            <p id="mensaje" class="text-[#883aaf] font-bold">🔮</p>
+        </div>
+
+        <div class="mt-4">
+            <p class="text-[#883aaf] text-xs font-bold uppercase tracking-widest">
+                Intentos realizados: <span id="contador-vistas" class="text-lg">0</span>
+            </p>
+        </div>
+
+        <button onclick="location.reload()"
+            class="mt-8 text-[#545f66] text-[10px] font-black uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity">
+            ↻ Reiniciar Sistema
+        </button>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
