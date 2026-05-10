@@ -2,7 +2,7 @@ const INPUT = document.getElementById("numero-usuario");
 const BOTON = document.getElementById("btn-adivinar");
 const MENSAJE = document.getElementById("mensaje");
 const CUERPO = document.getElementById("cuerpo");
-const VISTA_INTENTOS = document.getElementById("contador-vistas"); // Asegúrate de tener este ID en tu HTML
+const VISTA_INTENTOS = document.getElementById("contador-vistas");
 
 const numeroSecreto = Math.floor(Math.random() * 500) + 1;
 let intentos = 0;
